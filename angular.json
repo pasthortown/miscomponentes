@@ -99,6 +99,141 @@
           }
         }
       }
+    },
+    "@pasthortown/menu-orden-pedido": {
+      "projectType": "library",
+      "root": "projects/pasthortown/menu-orden-pedido",
+      "sourceRoot": "projects/pasthortown/menu-orden-pedido/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pasthortown/menu-orden-pedido/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pasthortown/menu-orden-pedido/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pasthortown/menu-orden-pedido/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/pasthortown/menu-orden-pedido/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "@pasthortown/lista-orden-pedido": {
+      "projectType": "library",
+      "root": "projects/pasthortown/lista-orden-pedido",
+      "sourceRoot": "projects/pasthortown/lista-orden-pedido/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pasthortown/lista-orden-pedido/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pasthortown/lista-orden-pedido/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pasthortown/lista-orden-pedido/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/pasthortown/lista-orden-pedido/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "@pasthortown/precios-orden-pedido": {
+      "projectType": "library",
+      "root": "projects/pasthortown/precios-orden-pedido",
+      "sourceRoot": "projects/pasthortown/precios-orden-pedido/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pasthortown/precios-orden-pedido/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pasthortown/precios-orden-pedido/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pasthortown/precios-orden-pedido/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/pasthortown/precios-orden-pedido/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "@pasthortown/keyboard": {
+      "projectType": "library",
+      "root": "projects/pasthortown/keyboard",
+      "sourceRoot": "projects/pasthortown/keyboard/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pasthortown/keyboard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pasthortown/keyboard/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pasthortown/keyboard/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/pasthortown/keyboard/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

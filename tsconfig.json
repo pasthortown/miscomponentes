@@ -2,6 +2,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@pasthortown/keyboard": [
+        "dist/pasthortown/keyboard"
+      ],
+      "@pasthortown/lista-orden-pedido": [
+        "dist/pasthortown/lista-orden-pedido"
+      ],
+      "@pasthortown/menu-orden-pedido": [
+        "dist/pasthortown/menu-orden-pedido"
+      ],
+      "@pasthortown/precios-orden-pedido": [
+        "dist/pasthortown/precios-orden-pedido"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

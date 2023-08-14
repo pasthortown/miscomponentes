@@ -1,0 +1,141 @@
+.keyboard-area-querty-numpad {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: auto;
+}
+
+.keyboard-area-numpad {
+  max-width: 200px;
+  min-width: 150px;
+  margin: auto;
+}
+
+.keyboard-area-querty {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: auto;
+}
+
+.keyboard-full-container {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D2228;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.keyboard-container-full-width {
+  width: 100%;
+}
+
+.keyboard-container {
+  width: 75%;
+}
+
+.num-pad-container {
+  margin-left:3%;
+  width: 22%;
+}
+
+.keys-row {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom:2px;
+}
+
+.key {
+  margin-left:2px;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #ccc;
+  cursor: pointer;
+  background-color: #333C45;
+}
+
+.key:hover {
+  background-color: #7c7c7c;
+}
+
+.key:active {
+  color:black;
+  background-color: #ffff;
+}
+
+.key-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key_huge-button {
+  width: 45%;
+  background-color: #3A4B5D;
+}
+
+.key_fat-button {
+  width: 15%;
+  background-color: #3A4B5D;
+}
+
+.keyboard-suggestions-panel {
+  flex-direction: row;
+  display: flex;
+  align-items: flex-start;
+  background-color: #1D2228;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.keyboard-suggestion {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left:2px;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #ccc;
+  padding: 5px;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #333C45;
+}
+
+.keyboard-suggestion:hover {
+  background-color: #7c7c7c;
+}
+
+.keyboard-suggestion:active {
+  color:black;
+  background-color: #ffff;
+}
+
+.keyboard-suggestions-panel::-webkit-scrollbar {
+  background-color: #1D2228;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.keyboard-suggestions-panel::-webkit-scrollbar-thumb {
+  border: 1px solid #ccc;
+  border-radius: 0px 0px 10px 10px;
+  cursor: pointer;
+  background-color: #7c7c7c;
+}
+
+.keyboard-suggestions-panel::-webkit-scrollbar-button:start:decrement,
+.keyboard-suggestions-panel::-webkit-scrollbar-button:end:increment {
+  display: none;
+}
+
+.keyboard-suggestions-panel::-webkit-scrollbar-thumb:hover {
+  background-color: #a09f9f;
+}

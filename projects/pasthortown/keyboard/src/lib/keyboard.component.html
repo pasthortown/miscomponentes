@@ -1,0 +1,36 @@
+<div
+  [ngClass]="{'keyboard-area-querty-numpad': show_qwerty && show_numpad,
+              'keyboard-area-querty': show_qwerty && !show_numpad,
+              'keyboard-area-numpad': !show_qwerty && show_numpad
+            }"
+>
+  <div class="keyboard-suggestions-panel" *ngIf="suggestions.length > 0">
+    <button *ngFor="let suggestion of suggestions" class="keyboard-suggestion">{{suggestion}}</button>
+  </div>
+  <div class="keyboard-full-container">
+    <div *ngIf="show_qwerty" [ngClass]="{'keyboard-container': show_numpad, 'keyboard-container-full-width': !show_numpad}">
+      <div *ngFor="let fila of teclado" class="keys-row">
+        <button *ngFor="let tecla of fila" class="key" (click)="key_press(tecla)"
+          [ngClass]="{'key_huge-button': tecla.width === 'huge',
+            'key_fat-button': tecla.width === 'fat',
+            'key-button': (tecla.width !== 'fat' && tecla.width !== 'huge')}">
+          <span *ngIf="behavior == 'lower'">{{ tecla.lower_key }}</span>
+          <span *ngIf="behavior == 'upper'">{{ tecla.upper_key }}</span>
+          <span *ngIf="behavior == 'symbol'">{{ tecla.spec_key }}</span>
+        </button>
+      </div>
+    </div>
+    <div *ngIf="show_numpad" [ngClass]="{'num-pad-container': show_qwerty, 'keyboard-container-full-width': !show_qwerty}">
+      <div *ngFor="let fila of pad_numerico" class="keys-row">
+        <button *ngFor="let tecla of fila" class="key" (click)="key_press(tecla)"
+          [ngClass]="{'key_huge-button': tecla.width === 'huge',
+            'key_fat-button': tecla.width === 'fat',
+            'key-button': (tecla.width !== 'fat' && tecla.width !== 'huge')}">
+          <span *ngIf="behavior == 'lower'">{{ tecla.lower_key }}</span>
+          <span *ngIf="behavior == 'upper'">{{ tecla.upper_key }}</span>
+          <span *ngIf="behavior == 'symbol'">{{ tecla.spec_key }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

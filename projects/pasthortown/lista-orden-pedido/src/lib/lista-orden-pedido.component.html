@@ -1,0 +1,45 @@
+<div class="contenedor-orden-pedido">
+  <div *ngFor="let item of ordenPedido" class="producto" (click)="selected(item)">
+    <table>
+      <tr>
+        <td class="cantidad">{{ item.cantidad }}</td>
+        <td>{{ item.descripcion }}</td>
+        <td class="precio"><span *ngIf="item.precio > 0">{{ item.precio | currency: moneda }}</span></td>
+      </tr>
+    </table>
+    <div *ngIf="item.subproductos && item.subproductos.length > 0">
+      <div *ngFor="let subproducto of item.subproductos" class="subproducto">
+        <table class="subproducto">
+          <tr>
+            <td class="cantidad sub"><span *ngIf="subproducto.cantidad > 0">{{ subproducto.cantidad }}</span></td>
+            <td class="sub">{{ subproducto.descripcion }}</td>
+            <td class="precio"></td>
+          </tr>
+        </table>
+        <div *ngIf="subproducto.modificadores && subproducto.modificadores.length > 0">
+          <div *ngFor="let modificador of subproducto.modificadores" class="subproducto-modificador">
+            <table>
+              <tr>
+                <td class="cantidad sub2"><span *ngIf="modificador.cantidad > 0">{{ modificador.cantidad }}</span></td>
+                <td class="sub2">{{ modificador.descripcion }}</td>
+                <td class="precio"><span *ngIf="modificador.precio > 0">{{ modificador.precio | currency: moneda }}</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="item.modificadores && item.modificadores.length">
+      <div *ngFor="let item_modificador of item.modificadores" class="producto-modificador">
+        <table>
+          <tr>
+            <td class="cantidad sub"><span *ngIf="item_modificador.cantidad > 0">{{ item_modificador.cantidad }}</span></td>
+            <td class="sub">{{ item_modificador.descripcion }}</td>
+            <td class="precio"><span *ngIf="item_modificador.precio > 0">{{ item_modificador.precio | currency: moneda }}</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
