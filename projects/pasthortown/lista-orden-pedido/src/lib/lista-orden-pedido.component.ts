@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'lib-lista-orden-pedido',
+  selector: 'lista-orden-pedido',
   templateUrl: './lista-orden-pedido.component.html',
   styleUrls: ['./lista-orden-pedido.component.scss']
 })

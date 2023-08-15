@@ -12,19 +12,21 @@ export class AppComponent {
       cantidad: 1,
       descripcion: 'Combo Familiar',
       precio: 17,
+      descuento: false,
       subproductos: [
         {
           cantidad: 1,
           descripcion: 'Hamburguesa 1',
           modificadores: [
-            { cantidad: 0, descripcion: "Sin cebolla", precio: 0 },
-            { cantidad: 0, descripcion: "Tomate Cherry", precio: 0 },
-            { cantidad: 1, descripcion: "Agrandado", precio: 0.5 }
+            { cantidad: 0, descripcion: "Sin cebolla", precio: 0, descuento: false },
+            { cantidad: 0, descripcion: "Tomate Cherry", precio: 0, descuento: false },
+            { cantidad: 1, descripcion: "Agrandado", precio: 0.5, descuento: true }
           ]
         },
         {
           cantidad: 1,
           descripcion: 'Hamburguesa 2',
+          descuento: false,
           modificadores: [
             { cantidad: 0, descripcion: 'Tomate Cherry', precio: 0 },
             { cantidad: 1, descripcion: 'Agrandado', precio: 0.5 },
@@ -33,7 +35,7 @@ export class AppComponent {
         }
       ],
       modificadores: [
-        { cantidad: 2, descripcion: 'Desechables', precio: 0.35 },
+        { cantidad: 2, descripcion: 'Desechables', precio: 0.35, descuento: true },
         { cantidad: 1, descripcion: 'Agrandado', precio: 0.8 }
       ]
     },

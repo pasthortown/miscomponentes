@@ -1,12 +1,14 @@
-<!-- <lib-menu-orden-pedido></lib-menu-orden-pedido> -->
+<div style="position: fixed; left: 350px; top: 0px; bottom: 300px; right: 50px;">
+  <menu-orden-pedido></menu-orden-pedido>
+</div>
 <div style="position: fixed; left: 0px; top: 0px; bottom: 0px; width: 300px; padding: 10px;">
   <div style="width: 100%; height: 70%;">
-    <lib-lista-orden-pedido [orden_pedido]="orden_pedido" [moneda]="'USD'" (item_selected)="selected_item($event)"></lib-lista-orden-pedido>
+    <lista-orden-pedido [orden_pedido]="orden_pedido" [moneda]="'USD'" (item_selected)="selected_item($event)"></lista-orden-pedido>
   </div>
   <div style="width: 300px; margin-top: 5%; height: 25%;">
-    <lib-precios-orden-pedido [totales]="totales" [moneda]="'USD'"></lib-precios-orden-pedido>
+    <precios-orden-pedido [totales]="totales" [moneda]="'USD'"></precios-orden-pedido>
   </div>
 </div>
-<div style="width: 700px; position: fixed; bottom: 20px; left: 400px;">
-  <lib-keyboard [suggestions]="['@gmail.com', '@outlook.com', '@outlook.es','@hotmail.com']"></lib-keyboard>
+<div style="width: 50%; position: fixed; bottom: 20px; left: 350px;">
+  <touch-keyboard [suggestions]="['@gmail.com', '@outlook.com', '@outlook.es','@hotmail.com']"></touch-keyboard>
 </div>

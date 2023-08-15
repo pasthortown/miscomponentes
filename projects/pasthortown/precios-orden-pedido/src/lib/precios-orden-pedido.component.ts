@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'lib-precios-orden-pedido',
+  selector: 'precios-orden-pedido',
   templateUrl: './precios-orden-pedido.component.html',
   styleUrls: ['./precios-orden-pedido.component.scss']
 })

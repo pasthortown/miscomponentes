@@ -1,8 +1,5 @@
 .contenedor-precios-orden-pedido {
-  height: 100%;
-  border-color: black;
-  border-width: 1px;
-  border-style: solid;
+  border: 1px solid black;
   border-radius: 10px;
 }
 
@@ -49,6 +46,7 @@ tr:first-child td:last-child {
 tr:last-child {
   background-color: #FF0029;
   color: white;
+  font-size: 20px;
   font-weight: bold;
 }
 

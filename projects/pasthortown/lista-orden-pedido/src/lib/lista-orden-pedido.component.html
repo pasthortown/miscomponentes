@@ -1,5 +1,5 @@
 <div class="contenedor-orden-pedido">
-  <div *ngFor="let item of ordenPedido" class="producto" (click)="selected(item)">
+  <div *ngFor="let item of ordenPedido" class="producto" [ngClass]="{'descuento': item.descuento}" (click)="selected(item)">
     <table>
       <tr>
         <td class="cantidad">{{ item.cantidad }}</td>
@@ -8,8 +8,8 @@
       </tr>
     </table>
     <div *ngIf="item.subproductos && item.subproductos.length > 0">
-      <div *ngFor="let subproducto of item.subproductos" class="subproducto">
-        <table class="subproducto">
+      <div *ngFor="let subproducto of item.subproductos" class="subproducto" [ngClass]="{'descuento': subproducto.descuento}">
+        <table>
           <tr>
             <td class="cantidad sub"><span *ngIf="subproducto.cantidad > 0">{{ subproducto.cantidad }}</span></td>
             <td class="sub">{{ subproducto.descripcion }}</td>
@@ -17,7 +17,7 @@
           </tr>
         </table>
         <div *ngIf="subproducto.modificadores && subproducto.modificadores.length > 0">
-          <div *ngFor="let modificador of subproducto.modificadores" class="subproducto-modificador">
+          <div *ngFor="let modificador of subproducto.modificadores" class="subproducto-modificador" [ngClass]="{'descuento': modificador.descuento}">
             <table>
               <tr>
                 <td class="cantidad sub2"><span *ngIf="modificador.cantidad > 0">{{ modificador.cantidad }}</span></td>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div *ngIf="item.modificadores && item.modificadores.length">
-      <div *ngFor="let item_modificador of item.modificadores" class="producto-modificador">
+      <div *ngFor="let item_modificador of item.modificadores" class="producto-modificador" [ngClass]="{'descuento': item_modificador.descuento}">
         <table>
           <tr>
             <td class="cantidad sub"><span *ngIf="item_modificador.cantidad > 0">{{ item_modificador.cantidad }}</span></td>
