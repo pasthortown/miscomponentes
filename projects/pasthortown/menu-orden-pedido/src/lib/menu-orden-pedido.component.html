@@ -11,20 +11,5 @@
       <span class="descripcion-menu-item-card">{{product.description}}</span>
       <span class="precio-menu-item-card">{{product.price | currency}}</span>
     </div>
-    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
-      <img [src]="product.image" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">{{product.description}}</span>
-      <span class="precio-menu-item-card">{{product.price | currency}}</span>
-    </div>
-    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
-      <img [src]="product.image" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">{{product.description}}</span>
-      <span class="precio-menu-item-card">{{product.price | currency}}</span>
-    </div>
-    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
-      <img [src]="product.image" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">{{product.description}}</span>
-      <span class="precio-menu-item-card">{{product.price | currency}}</span>
-    </div>
   </div>
 </div>
