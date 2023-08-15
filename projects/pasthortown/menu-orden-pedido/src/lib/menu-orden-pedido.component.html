@@ -1,12 +1,12 @@
 <div class="menu-main-container">
   <div class="menu-container to-top">
-    <div *ngFor="let category of lista_categorias" class="menu-item-card" [ngClass]="{'selected': category.selected}" [style.border-top-color]="category.color" (click)="selected_category(category)">
+    <div *ngFor="let category of lista_categorias" class="menu-item-card" [ngClass]="{'selected': category.selected, 'unselected': !category.selected}" [style.border-top-color]="category.color" (click)="selected_category(category)">
       <img [src]="category.image" class="img-comercio"/>
       <span class="descripcion-menu-item-card">{{category.description}}</span>
     </div>
   </div>
   <div class="menu-container to-bottom">
-    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
+    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected, 'unselected': !product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
       <img [src]="product.image" class="img-comercio"/>
       <span class="descripcion-menu-item-card">{{product.description}}</span>
       <span class="precio-menu-item-card">{{product.price | currency}}</span>
