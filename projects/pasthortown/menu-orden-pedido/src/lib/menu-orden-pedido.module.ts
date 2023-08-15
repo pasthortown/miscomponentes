@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MenuOrdenPedidoComponent } from './menu-orden-pedido.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -8,6 +10,8 @@ import { MenuOrdenPedidoComponent } from './menu-orden-pedido.component';
     MenuOrdenPedidoComponent
   ],
   imports: [
+    BrowserModule,
+    FormsModule
   ],
   exports: [
     MenuOrdenPedidoComponent

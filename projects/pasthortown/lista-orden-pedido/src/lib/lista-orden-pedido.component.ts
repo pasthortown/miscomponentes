@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ListaOrdenPedidoComponent {
 
   @Input('orden_pedido') ordenPedido: any[] = [];
-  @Input('moneda') moneda: string = '$';
+  @Input('moneda') moneda: string = 'USD';
 
   @Output() item_selected = new EventEmitter<any>();
 

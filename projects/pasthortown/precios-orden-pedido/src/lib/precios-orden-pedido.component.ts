@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 export class PreciosOrdenPedidoComponent {
 
   @Input('totales') totales_detalle: { key: string, value: number }[] = [];
-  @Input('moneda') moneda: string = '$';
+  @Input('moneda') moneda: string = 'USD';
 }

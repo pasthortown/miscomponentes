@@ -79,6 +79,38 @@ export class AppComponent {
     {key: 'Total', value: 55.866},
   ];
 
+  lista_categorias: any[] = [
+    {
+      description: 'Martes Locos',
+      color: 'purple',
+      selected: false,
+      image: 'https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_2916CA10-78BA-EA11-80EE-000D3A019254_744x744.png?d=300x300&format=webp',
+      productos: [
+        {
+          description: 'Martes Loco 7 Presas',
+          price: 8.99,
+          color: 'red',
+          selected: false,
+          image: 'https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_56586_745x745_1687201587.png?d=300x300&format=webp'
+        },
+        {
+          description: 'Big Box Ultra',
+          price: 6.50,
+          color: 'yellow',
+          selected: false,
+          image: 'https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_46589_744x744_1679530547.png?d=300x300&format=webp'
+        },
+        {
+          description: 'Mega Wow Box Pop Corn',
+          price: 5.50,
+          color: 'green',
+          selected: false,
+          image: 'https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_55558_744x744_1679512654.png?d=300x300&format=webp'
+        },
+      ]
+    }
+  ];
+
   selected_item(event: any) {
     console.log(event);
   }

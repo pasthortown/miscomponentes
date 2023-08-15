@@ -1,26 +1,15 @@
 <div class="menu-main-container">
   <div class="menu-container to-top">
-    <div class="menu-item-card selected" [style.border-top-color]="'green'">
-      <img src="https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_2916CA10-78BA-EA11-80EE-000D3A019254_744x744.png?d=300x300&format=webp" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">Martes Locos</span>
-      <span class="precio-menu-item-card"></span>
+    <div *ngFor="let category of lista_categorias" class="menu-item-card" [ngClass]="{'selected': category.selected}" [style.border-top-color]="category.color" (click)="selected_category(category)">
+      <img [src]="category.image" class="img-comercio"/>
+      <span class="descripcion-menu-item-card">{{category.description}}</span>
     </div>
   </div>
   <div class="menu-container to-bottom">
-    <div class="menu-item-card" [style.border-top-color]="'red'">
-      <img src="https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_56586_745x745_1687201587.png?d=300x300&format=webp" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">Martes Loco 7 Presas</span>
-      <span class="precio-menu-item-card">$8.99</span>
-    </div>
-    <div class="menu-item-card" [style.border-top-color]="'red'">
-      <img src="https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_46589_744x744_1679530547.png?d=300x300&format=webp" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">Big Box Ultra</span>
-      <span class="precio-menu-item-card">$6.50</span>
-    </div>
-    <div class="menu-item-card" [style.border-top-color]="'red'">
-      <img src="https://images.getduna.com/2bb258f4-051d-4a46-9321-b0a7a857cd71/28292942913db08a_domicilio_55558_744x744_1679512654.png?d=300x300&format=webp" class="img-comercio"/>
-      <span class="descripcion-menu-item-card">Mega Wow Box Pop Corn</span>
-      <span class="precio-menu-item-card">$5.50</span>
+    <div *ngFor="let product of lista_productos" class="menu-item-card" [ngClass]="{'selected': product.selected}" [style.border-top-color]="product.color" (click)="selected_product(product)">
+      <img [src]="product.image" class="img-comercio"/>
+      <span class="descripcion-menu-item-card">{{product.description}}</span>
+      <span class="precio-menu-item-card">{{product.price | currency}}</span>
     </div>
   </div>
 </div>
