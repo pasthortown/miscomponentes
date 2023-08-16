@@ -71,12 +71,18 @@ export class AppComponent {
   ];
 
   totales = [
-    {key: 'Sub Total', value: 48.30},
-    {key: 'IVA 12%', value: 5.796},
-    {key: 'Servicio 10%', value: 4.83},
-    {key: 'Domicilio', value: 2.50},
-    {key: 'Descuentos', value: -5.56},
-    {key: 'Total', value: 55.866},
+    {key: 'Sub Total', value: 48.30, type: 'moneda', backgroundcolor: 'blue', color: 'white', fontsize: '15px', fontweight: 'bold'},
+    {key: 'IVA 12%', value: 5.796, type: 'moneda'},
+    {key: 'Servicio 10%', value: 4.83, type: 'moneda'},
+    {key: 'Domicilio', value: 2.50, type: 'moneda'},
+    {key: 'Descuentos', value: -5.56, type: 'moneda', backgroundcolor: 'green', color: 'white', fontsize: '15px', fontweight: 'bold'},
+    {key: 'Total', value: 55.866, type: 'moneda', backgroundcolor: '#FF0029', color: 'white', fontsize: '24px', fontweight: 'bold'},
+  ];
+
+  cabecera_orden_pedido = [
+    {key: 'Mesa', value: 48, fontsize: '14px', fontweight: 'bold'},
+    {key: 'Número Órden', value: 5, fontsize: '14px', fontweight: 'bold'},
+    {key: 'Cajero', value: 'Luis Salazar', fontsize: '14px', fontweight: 'bold'},
   ];
 
   lista_categorias: any[] = [

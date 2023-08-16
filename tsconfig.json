@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@pasthortown/cabecera-informativa": [
+        "dist/pasthortown/cabecera-informativa"
+      ],
       "@pasthortown/keyboard": [
         "dist/pasthortown/keyboard"
       ],

@@ -1,9 +1,0 @@
-<div class="contenedor-precios-orden-pedido">
-  <table>
-    <tbody>
-      <tr *ngFor="let linea of totales_detalle">
-        <td class="segmentos">{{linea.key}}</td><td class="valor">{{linea.value | currency: moneda}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>

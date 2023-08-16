@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'menu-orden-pedido',
   templateUrl: './menu-orden-pedido.component.html',
   styleUrls: ['./menu-orden-pedido.component.scss']
 })
-export class MenuOrdenPedidoComponent {
+export class MenuOrdenPedidoComponent implements OnChanges {
 
   @Input('moneda') moneda: string = 'USD';
   @Input('lista_categorias') lista_categorias: any[] = [];
@@ -34,5 +34,13 @@ export class MenuOrdenPedidoComponent {
       }
     });
     this.product_selected.emit(item);
+  }
+
+  ngOnChanges() {
+    this.lista_categorias.forEach((element: any) => {
+      if (element.selected == true) {
+        this.lista_productos = element.productos;
+      }
+    });
   }
 }

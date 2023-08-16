@@ -1,0 +1,29 @@
+<div class="contenedor-cabecera-informativa">
+  <table>
+    <tbody>
+      <tr *ngFor="let linea of segmentos">
+        <td class="segmentos"
+          [style.font-size]="linea.fontsize"
+          [style.font-weight]="linea.fontweight"
+          [style.background-color]="linea.backgroundcolor"
+          [style.color]="linea.color">
+            {{linea.key}}
+        </td>
+        <td class="valor-moneda" *ngIf="linea.type == 'moneda'"
+          [style.font-size]="linea.fontsize"
+          [style.font-weight]="linea.fontweight"
+          [style.background-color]="linea.backgroundcolor"
+          [style.color]="linea.color">
+            {{linea.value | currency: moneda}}
+        </td>
+        <td class="valor" *ngIf="linea.type !== 'moneda'"
+          [style.font-size]="linea.fontsize"
+          [style.font-weight]="linea.fontweight"
+          [style.background-color]="linea.backgroundcolor"
+          [style.color]="linea.color">
+            {{linea.value}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

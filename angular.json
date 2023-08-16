@@ -231,6 +231,39 @@
           }
         }
       }
+    },
+    "@pasthortown/cabecera-informativa": {
+      "projectType": "library",
+      "root": "projects/pasthortown/cabecera-informativa",
+      "sourceRoot": "projects/pasthortown/cabecera-informativa/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pasthortown/cabecera-informativa/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pasthortown/cabecera-informativa/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pasthortown/cabecera-informativa/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/pasthortown/cabecera-informativa/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

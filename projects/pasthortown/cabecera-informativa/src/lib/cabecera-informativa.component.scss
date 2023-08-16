@@ -1,6 +1,7 @@
-.contenedor-precios-orden-pedido {
+.contenedor-cabecera-informativa {
   border: 1px solid black;
   border-radius: 10px;
+  height: 100%;
 }
 
 table {
@@ -15,7 +16,6 @@ table {
 
 td, th {
   text-align: left;
-  padding: 8px;
 }
 
 tr:nth-child(even) {
@@ -31,6 +31,12 @@ tr:nth-child(even) {
 }
 
 .valor {
+  width: 50%;
+  text-align: left;
+  text-indent: 5%;
+}
+
+.valor-moneda {
   width: 30%;
   text-align: right;
 }
@@ -41,13 +47,6 @@ tr:first-child td:first-child {
 
 tr:first-child td:last-child {
   border-top-right-radius: 10px;
-}
-
-tr:last-child {
-  background-color: #FF0029;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 tr:last-child td:first-child {

@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MenuOrdenPedidoModule } from 'projects/pasthortown/menu-orden-pedido/src/public-api';
 import { ListaOrdenPedidoModule } from 'projects/pasthortown/lista-orden-pedido/src/public-api';
-import { PreciosOrdenPedidoModule } from 'projects/pasthortown/precios-orden-pedido/src/public-api';
 import { KeyboardModule } from 'projects/pasthortown/keyboard/src/public-api';
+import { CabeceraInformativaModule } from 'projects/pasthortown/cabecera-informativa/src/public-api';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { KeyboardModule } from 'projects/pasthortown/keyboard/src/public-api';
     BrowserModule,
     MenuOrdenPedidoModule,
     ListaOrdenPedidoModule,
-    PreciosOrdenPedidoModule,
+    CabeceraInformativaModule,
     KeyboardModule
   ],
   providers: [],
