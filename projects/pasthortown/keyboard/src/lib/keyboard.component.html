@@ -5,7 +5,7 @@
             }"
 >
   <div class="keyboard-suggestions-panel" *ngIf="suggestions.length > 0">
-    <button *ngFor="let suggestion of suggestions" class="keyboard-suggestion">{{suggestion}}</button>
+    <button *ngFor="let suggestion of suggestions" class="keyboard-suggestion" (click)="suggestion_press(suggestion)">{{suggestion}}</button>
   </div>
   <div class="keyboard-full-container">
     <div *ngIf="show_qwerty" [ngClass]="{'keyboard-container': show_numpad, 'keyboard-container-full-width': !show_numpad}">

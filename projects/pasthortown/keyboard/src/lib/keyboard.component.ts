@@ -81,6 +81,10 @@ export class KeyboardComponent {
     ]
   ]
 
+  suggestion_press(suggestion: string) {
+    this.keypress.emit(suggestion);
+  }
+
   key_press(tecla: any) {
     if (tecla.command == 'symbol') {
       if (this.behavior == 'symbol') {

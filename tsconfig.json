@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@pasthortown/botones-pago-efectivo": [
+        "dist/pasthortown/botones-pago-efectivo"
+      ],
       "@pasthortown/cabecera-informativa": [
         "dist/pasthortown/cabecera-informativa"
       ],

@@ -1,0 +1,14 @@
+
+<div class="money-container">
+  <div class="coins-container">
+    <div *ngFor="let coin of coins" class="coin" [ngClass]="coin.color" (click)="button_press(coin)">
+      <span class="number">{{coin.number}}</span>
+    </div>
+  </div>
+  <div class="bills-container">
+    <div *ngFor="let bill of bills" class="bill" (click)="button_press(bill)">
+      <div class="waves"></div>
+      <span class="number">{{bill.number | currency: moneda}}</span>
+    </div>
+  </div>
+</div>

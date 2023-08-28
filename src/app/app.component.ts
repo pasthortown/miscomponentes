@@ -71,7 +71,7 @@ export class AppComponent {
   ];
 
   totales = [
-    {key: 'Sub Total', value: 48.30, type: 'moneda', backgroundcolor: 'blue', color: 'white', fontsize: '15px', fontweight: 'bold'},
+    {key: 'Sub Total', value: 48.30, type: 'moneda', backgroundcolor: 'blue', color: 'pink', fontsize: '15px', fontweight: 'bold'},
     {key: 'IVA 12%', value: 5.796, type: 'moneda'},
     {key: 'Servicio 10%', value: 4.83, type: 'moneda'},
     {key: 'Domicilio', value: 2.50, type: 'moneda'},
@@ -115,6 +115,22 @@ export class AppComponent {
         },
       ]
     }
+  ];
+
+  bills: any[] = [
+    {number: 5, value: 5},
+    {number: 10, value: 10},
+    {number: 20, value: 20},
+    {number: 50, value: 50},
+    {number: 100, value: 100}
+  ];
+
+  coins: any[] = [
+    {value:0.01, number:1, color: 'gold'},
+    {value:0.05, number:5, color: 'silver'},
+    {value:0.1, number:10, color: 'silver'},
+    {value:0.25, number:25, color: 'silver'},
+    {value:0.5, number:50, color: 'silver'}
   ];
 
   selected_item(event: any) {
