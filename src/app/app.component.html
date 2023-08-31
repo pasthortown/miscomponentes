@@ -1,6 +1,9 @@
-<div style="position: fixed; left: 350px; top:0px; padding: 10px; width: 300px;">
-  <botones-pago-efectivo [bills]="bills" [coins]="coins" [moneda]="'USD'" (keypress)="selected_item($event)"></botones-pago-efectivo>
+<div style="position: fixed; left: 350px; top:0px; padding: 10px; height: 300px;">
+  <botones-pago-efectivo [coins_container_width]="'120px'" [cards]="cards" [bills]="bills" [coins]="coins" [moneda]="'USD'" (keypress)="selected_item($event)"></botones-pago-efectivo>
 </div>
+<!-- <div style="position: fixed; left: 350px; top:0px; right:0; padding: 10px; height: 100%;">
+  <menu-orden-pedido [moneda]="'USD'" [lista_categorias]="lista_categorias"></menu-orden-pedido>
+</div> -->
 <div style="position: fixed; left: 0px; top: 0px; bottom: 0px; width: 300px; padding: 10px;">
   <div style="width: 300px; height: 15%;">
     <cabecera-informativa [segmentos]="cabecera_orden_pedido"></cabecera-informativa>

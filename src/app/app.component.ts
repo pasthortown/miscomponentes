@@ -125,6 +125,12 @@ export class AppComponent {
     {number: 100, value: 100}
   ];
 
+  cards: any[] = [
+    {image: 'https://th.bing.com/th/id/OIP.B3NM8WAJFRbORqDnG58cqwHaEq?w=265&h=180&c=7&r=0&o=5&pid=1.7', name: 'visa'},
+    {image: 'https://th.bing.com/th/id/OIP.B3NM8WAJFRbORqDnG58cqwHaEq?w=265&h=180&c=7&r=0&o=5&pid=1.7', name: 'mastercard'},
+    {image: 'https://th.bing.com/th/id/OIP.B3NM8WAJFRbORqDnG58cqwHaEq?w=265&h=180&c=7&r=0&o=5&pid=1.7', name: 'dinners'}
+  ];
+
   coins: any[] = [
     {value:0.01, number:1, color: 'gold'},
     {value:0.05, number:5, color: 'silver'},

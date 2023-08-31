@@ -1,14 +1,20 @@
 
 <div class="money-container">
-  <div class="coins-container">
+  <div class="coins-container" *ngIf="coins.length > 0" [style.width]="coins_container_width">
     <div *ngFor="let coin of coins" class="coin" [ngClass]="coin.color" (click)="button_press(coin)">
       <span class="number">{{coin.number}}</span>
     </div>
   </div>
-  <div class="bills-container">
+  <div class="bills-container" *ngIf="bills.length > 0" [style.width]="bills_container_width">
     <div *ngFor="let bill of bills" class="bill" (click)="button_press(bill)">
       <div class="waves"></div>
       <span class="number">{{bill.number | currency: moneda}}</span>
+    </div>
+  </div>
+  <div class="cards-container" *ngIf="cards.length > 0" [style.width]="cards_container_width">
+    <div *ngFor="let card of cards" class="card" (click)="button_press(card)">
+      <img [src]="card.image" class="img-card"/>
+      <div class="waves"></div>
     </div>
   </div>
 </div>
