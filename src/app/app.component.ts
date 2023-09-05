@@ -150,6 +150,7 @@ export class AppComponent {
       this.hasNetworkConnection = currentState.hasNetworkConnection;
       this.hasInternetAccess = currentState.hasInternetAccess;
       this.connectionStatus = this.hasNetworkConnection && this.hasInternetAccess;
+      console.log(this.connectionStatus);
     });
   }
 
