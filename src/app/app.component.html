@@ -1,10 +1,10 @@
-<div style="position: fixed; left: 350px; top:0px; padding: 10px; height: 300px;">
+<!--<div style="position: fixed; left: 350px; top:0px; padding: 10px; height: 300px;">
   <botones-pago-efectivo [coins_container_width]="'120px'" [cards]="cards" [bills]="bills" [coins]="coins" [moneda]="'USD'" (keypress)="selected_item($event)"></botones-pago-efectivo>
-</div>
+</div> -->
 <!-- <div style="position: fixed; left: 350px; top:0px; right:0; padding: 10px; height: 100%;">
   <menu-orden-pedido [moneda]="'USD'" [lista_categorias]="lista_categorias"></menu-orden-pedido>
 </div> -->
-<div style="position: fixed; left: 0px; top: 0px; bottom: 0px; width: 300px; padding: 10px;">
+<!--<div style="position: fixed; left: 0px; top: 0px; bottom: 0px; width: 300px; padding: 10px;">
   <div style="width: 300px; height: 15%;">
     <cabecera-informativa [segmentos]="cabecera_orden_pedido"></cabecera-informativa>
   </div>
@@ -17,4 +17,11 @@
 </div>
 <div style="width: 50%; position: fixed; bottom: 20px; left: 350px;">
   <touch-keyboard [suggestions]="['@gmail.com', '@outlook.com', '@outlook.es','@hotmail.com']" [show_numpad]="false" (keypress)="selected_item($event)"></touch-keyboard>
-</div>
+</div> -->
+<button (click)="writeIndexedDB()">Almacenar</button>
+<button (click)="getIndexedDBById()">Leer</button>
+<button (click)="getAllIndexedDB()">Leer Todo</button>
+<button (click)="updateIndexedDB()">Actualizar</button>
+<button (click)="deleteIndexedDB()">Borrar</button>
+<button (click)="deleteAllIndexedDB()">Borrar Todo</button>
+

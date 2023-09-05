@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ConnectionService } from 'ngx-connection-service';
+import { PwaDataServiceService } from './services/pwa-data-service.service';
 
 @Component({
   selector: 'app-root',
@@ -139,7 +141,59 @@ export class AppComponent {
     {value:0.5, number:50, color: 'silver'}
   ];
 
+  hasNetworkConnection: boolean = false;
+  hasInternetAccess: boolean = false;
+  connectionStatus: boolean = false;
+
+  constructor(private connectionService: ConnectionService, private pwaDataService: PwaDataServiceService) {
+    this.connectionService.monitor().subscribe((currentState: any) => {
+      this.hasNetworkConnection = currentState.hasNetworkConnection;
+      this.hasInternetAccess = currentState.hasInternetAccess;
+      this.connectionStatus = this.hasNetworkConnection && this.hasInternetAccess;
+    });
+  }
+
   selected_item(event: any) {
     console.log(event);
+  }
+
+  writeIndexedDB() {
+    const newObject = {id: 100, name: 'Luis'};
+    this.pwaDataService.addObject(newObject).subscribe(() => {
+      console.log('Objeto agregado a la base de datos');
+    });
+  }
+
+  getAllIndexedDB() {
+    this.pwaDataService.getAllObjects().subscribe((response) => {
+      console.log(response);
+    });
+  }
+
+  getIndexedDBById() {
+    const objectIdToGet = 100;
+    this.pwaDataService.getObjectByKey(objectIdToGet).subscribe((object) => {
+      console.log('Objeto obtenido de la base de datos:', object);
+    });
+  }
+
+  updateIndexedDB() {
+    const updatedObject = { id: 100, name: 'Maria', apellido: 'Loaiza' };
+    this.pwaDataService.updateObjectByKey(updatedObject).subscribe(() => {
+      console.log('Objeto actualizado en la base de datos');
+    });
+  }
+
+  deleteIndexedDB() {
+    const objectIdToDelete = 100;
+    this.pwaDataService.deleteObjectByKey(objectIdToDelete).subscribe((object) => {
+      console.log('Objeto eliminado de la base de datos:', object);
+    });
+  }
+
+  deleteAllIndexedDB() {
+    this.pwaDataService.deleteAllObjects().subscribe((object) => {
+      console.log('Base de datos limpia');
+    });
   }
 }
